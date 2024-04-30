@@ -6,4 +6,7 @@ export const Product = {
       return p.categoryId === departmentId;
     });
   },
+  reviews: ({ productId }, args, { reviews }) => {
+    return reviews.filter((r) => r.productId === productId);
+  },
 };

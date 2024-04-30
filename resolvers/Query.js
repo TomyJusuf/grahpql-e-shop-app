@@ -1,13 +1,18 @@
+// Main Topic
 //# type Query
+//3th paramert of context
+//destracture object inside paramerts
 
 export const Query = {
-  products: (parent, args, contextValue) => productsData,
+  products: (parent, args, { productsData }) => productsData,
+
   product: (parent, { id }, { productsData }) => {
-    return productsData.find((product) => product.productID === id);
+    return productsData.find((p) => p.productId === id);
   },
 
   categories: (parent, args, { category }) => category,
+
   category: (parent, { id }, { category }) => {
-    return category.find((dep) => dep.categoryId === id);
+    return category.find((c) => c.categoryId === id);
   },
 };
