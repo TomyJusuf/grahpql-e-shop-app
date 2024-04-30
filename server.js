@@ -5,13 +5,17 @@ import mongoose from 'mongoose';
 import { Query } from './resolvers/Query.js';
 import { Product } from './resolvers/Product.js';
 import { Category } from './resolvers/Category.js';
-
+import { productsData, category } from './graphQL/db.js';
 config();
 
 const mongoUrl = process.env.MONGODB_URL;
 const server = new ApolloServer({
   typeDefs,
   resolvers: { Query, Product, Category },
+  context: {
+    productsData,
+    category,
+  },
 });
 mongoose
   .connect(mongoUrl, { useNewUrlParser: true })

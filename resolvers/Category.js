@@ -1,8 +1,7 @@
-import { productsData } from '../graphQL/db.js';
+//# type Category
 
 export const Category = {
-  products: (parent, args, contextValue) => {
-    const { categoryId } = parent;
+  products: ({ categoryId }, args, { productsData }) => {
     return productsData.filter((p) => p.departmentId === categoryId);
   },
 };
