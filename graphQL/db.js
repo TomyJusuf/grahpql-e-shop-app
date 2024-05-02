@@ -15,6 +15,7 @@ export const productsData = [
     quantity: 100,
     type: 'CHOCOLATE',
     departmentId: 'sw0002',
+    onSale: true,
   },
   {
     productName: 'Banana',
@@ -24,6 +25,7 @@ export const productsData = [
     quantity: 200,
     type: 'TROPICAL_FRUIT',
     departmentId: 'fr004',
+    onSale: false,
   },
   {
     productName: 'Tomato',
@@ -33,6 +35,7 @@ export const productsData = [
     quantity: 150,
     type: 'FRUIT_VEGETABLES',
     departmentId: 'vg0001',
+    onSale: true,
   },
   {
     productName: 'Chips & GO',
@@ -42,6 +45,7 @@ export const productsData = [
     quantity: 120,
     type: 'SALT_BAKERY',
     departmentId: 'br0006',
+    onSale: false,
   },
   {
     productName: 'COCA COLA',
@@ -51,6 +55,7 @@ export const productsData = [
     price: 3,
     quantity: 80,
     departmentId: 'dr0005',
+    onSale: false,
   },
   {
     productName: 'Salamon',
@@ -60,6 +65,7 @@ export const productsData = [
     price: 3,
     quantity: 80,
     departmentId: 'fs0003',
+    onSale: true,
   },
 ];
 
@@ -132,7 +138,7 @@ export const reviews = [
     productId: 'c2af9adc-d0b8-4d44-871f-cef66f86f7f6',
   },
   {
-    id: 'f7ca2f8e-74ed-4323-9166-c8b606c2238e ',
+    id: 'f7ca2f8e-74ed-4323-9166-c8b606c2238e',
     date: '2021-04-23',
     title: 'SUPER HAPPY',
     comment: 'this is amazing, only 4 stars tho... :)',
@@ -226,7 +232,7 @@ export const reviews = [
     title: 'Gooooolf',
     comment: 'I need golfing tips',
     rating: 5,
-    productId: 'a4824a31-5c83-42af-8c1b-6e2461aae1ef',
+    productId: 'c2af9adc-d0b8-4d44-871f-cef66f86f7f6',
   },
   {
     id: '6ee01595-c3b8-42a9-b0e0-ce3cb2beb7d6',
@@ -273,7 +279,7 @@ export const reviews = [
     date: '2020-07-23',
     title: 'Big Fish',
     comment: 'i like this kind of fish',
-    rating: 4,
+    rating: 2,
     productId: '47bf3941-9c8b-42c0-9c72-7f3985492bb66',
   },
   {
@@ -281,7 +287,7 @@ export const reviews = [
     date: '2020-07-23',
     title: 'Taste so good',
     comment: 'One of the best fish i even eat',
-    rating: 2,
+    rating: 5,
     productId: '47bf3941-9c8b-42c0-9c72-7f3985492bb66',
   },
 ];
