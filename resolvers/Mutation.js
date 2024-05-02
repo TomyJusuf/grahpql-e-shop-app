@@ -6,7 +6,7 @@ export const Mutation = {
       categoryName: categoryName,
       categoryId: uuidv4(),
     };
-    category.push(newCategory);
+
     return newCategory;
   },
   addProduct: (parent, { input }, { productsData, category }) => {
@@ -14,9 +14,9 @@ export const Mutation = {
     const expirationDate =
       new Date().getFullYear() +
       1 +
-      '' +
-      new Date().getMonth() +
-      '' +
+      '-' +
+      (new Date().getMonth() + 1) +
+      '-' +
       new Date().getDate();
 
     const newProduct = {
@@ -25,11 +25,9 @@ export const Mutation = {
       price,
       quantity,
       onSale,
-
       type,
       productId: uuidv4(),
       expirationDate,
-
       departmentId: () => {
         const filterCategoryName = category.find((c) => {
           return c.categoryName === type;
