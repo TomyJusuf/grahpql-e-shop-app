@@ -35,7 +35,6 @@ export const Query = {
 
           return p;
         });
-
         return productsWithFilteredReviews;
       }
     } else {
@@ -50,7 +49,6 @@ export const Query = {
   },
 
   categories: (parent, args, { category }) => {
-    console.log(category);
     return category;
   },
 
